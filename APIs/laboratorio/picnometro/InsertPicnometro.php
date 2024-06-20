@@ -21,7 +21,10 @@ if (
         PesoDoPicnometro = :PesoDoPicnometro,
         PesoPicnometroMaisAgua = :PesoPicnometroMaisAgua,
         DataVerificacao = :DataVerificacao
-
+        ,Temperatura1 = :Temperatura1
+        ,Temperatura2 = :Temperatura2
+        ,PesoPicnometroATemperatura1 = :PesoPicnometroATemperatura1
+        ,PesoPicnometroATemperatura2 = :PesoPicnometroATemperatura2
 
     ");
     $query->bindValue(":Laboratorio", $postjson['laboratorio']);
@@ -29,7 +32,10 @@ if (
     $query->bindValue(":PesoDoPicnometro", $postjson['pesoDoPicnometro']);
     $query->bindValue(":PesoPicnometroMaisAgua", $postjson['pesoPicnometroMaisAgua']);
     $query->bindValue(":DataVerificacao", $postjson['dataVerificacao']);
-
+    $query->bindValue(":Temperatura1", $postjson['temperatura1']);
+    $query->bindValue(":Temperatura2", $postjson['temperatura2']);
+    $query->bindValue(":PesoPicnometroATemperatura1", $postjson['pesoPicnometroATemperatura1']);
+    $query->bindValue(":PesoPicnometroATemperatura2", $postjson['pesoPicnometroATemperatura2']);
 
 
     $execute = $query->execute();
