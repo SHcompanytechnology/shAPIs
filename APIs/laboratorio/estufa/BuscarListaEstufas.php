@@ -2,8 +2,8 @@
 
 include_once('conexaoSH.php');
 
-
-$query = $pdo->query("SELECT * from Estufa ");
+$LABORATORIO= $_GET['laboratorio'];
+$query = $pdo->query("SELECT * from Estufa where Laboratorio = '$LABORATORIO'");
 
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 
