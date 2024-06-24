@@ -65,14 +65,14 @@ $postjson = json_decode(file_get_contents("php://input"), true);
         , DataAprovacao = :DataAprovacao 
  
 
-        where Amostra =:Amostra and Lote = :Lote and Cliente = :Cliente
+        where Amostra =:Amostra and Lote = :Lote 
 
     ");
 
 
     $query->bindValue(":Amostra", $postjson['amostra']);
     $query->bindValue(":Lote", $postjson['lote']);
-    $query->bindValue(":Cliente", $postjson['cliente']);
+    
     $query->bindValue(":Estufa", $postjson['estufa']);
     $query->bindValue(":Balanca", $postjson['balanca']);
     $query->bindValue(":Norma", $postjson['norma']);

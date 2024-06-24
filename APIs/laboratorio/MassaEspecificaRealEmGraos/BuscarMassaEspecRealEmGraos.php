@@ -7,7 +7,7 @@ include_once('conexaoSH.php');
  $CLIENTE = $_GET['cliente'];
 
 
-$query = $pdo->query("SELECT * from MassaEspecificaRealEmGraos where Amostra LIKE '$AMOSTRA' and Lote LIKE '$LOTE' and Cliente LIKE '$CLIENTE' ");
+$query = $pdo->query("SELECT * from MassaEspecificaRealEmGraos where Amostra LIKE '$AMOSTRA' and Lote LIKE '$LOTE'  ");
 
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 
