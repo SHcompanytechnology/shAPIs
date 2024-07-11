@@ -14,7 +14,12 @@ for ($i = 0; $i < count($res); $i++) {
     }
     $dados[] = array(
                   
-        'id' => $res[$i]['id'],     
+        'id' => $res[$i]['id'],  
+        'nome' => $res[$i]['Nome'], 
+        'sobrenome' => $res[$i]['Sobrenome'], 
+        'email' => $res[$i]['Email'], 
+        'nivelDeHierarquia' => $res[$i]['NivelDeHierarquia'], 
+        'telefone' => $res[$i]['Telefone'],      
     );
 }
 
